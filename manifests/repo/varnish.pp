@@ -6,7 +6,8 @@ class yum::repo::varnish {
 
   yum::managed_yumrepo { 'varnish':
     descr          => 'Varnish 3.0 for Enterprise Linux 5 - $basearch',
-    baseurl        => 'http://repo.varnish-cache.org/redhat/varnish-3.0/el5/$basearch',
+    # baseurl        => 'http://repo.varnish-cache.org/redhat/varnish-3.0/el5/$basearch',
+    baseurl        => 'https://linuxsoft.cern.ch/centos-vault/6.9/sclo/$basearch/rh/',
     enabled        => 1,
     gpgcheck       => 0,
     failovermethod => 'priority',
