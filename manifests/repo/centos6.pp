@@ -52,8 +52,7 @@ class yum::repo::centos6 (
 
   yum::managed_yumrepo { 'base':
     descr          => 'CentOS-$releasever - Base',
-    baseurl        => $baseurl_base,
-    mirrorlist     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/os/$basearch/',
+    baseurl     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/os/$basearch/',
     failovermethod => 'priority',
     enabled        => 1,
     gpgcheck       => 1,
@@ -64,8 +63,7 @@ class yum::repo::centos6 (
 
   yum::managed_yumrepo { 'updates':
     descr          => 'CentOS-$releasever - Updates',
-    baseurl        => $baseurl_updates,
-    mirrorlist     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/updates/$basearch/',
+    baseurl     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/updates/$basearch/',
     failovermethod => 'priority',
     enabled        => 1,
     gpgcheck       => 1,
@@ -75,8 +73,7 @@ class yum::repo::centos6 (
 
   yum::managed_yumrepo { 'extras':
     descr          => 'CentOS-$releasever - Extras',
-    baseurl        => $baseurl_extras,
-    mirrorlist     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/extras/$basearch/',
+    baseurl     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/extras/$basearch/',
     failovermethod => 'priority',
     enabled        => 1,
     gpgcheck       => 1,
@@ -86,8 +83,7 @@ class yum::repo::centos6 (
 
   yum::managed_yumrepo { 'centosplus':
     descr          => 'CentOS-$releasever - Centosplus',
-    baseurl        => $baseurl_centosplus,
-    mirrorlist     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/centosplus/$basearch/',
+    baseurl     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/centosplus/$basearch/',
     failovermethod => 'priority',
     enabled        => 1,
     gpgcheck       => 1,
@@ -97,8 +93,7 @@ class yum::repo::centos6 (
 
   yum::managed_yumrepo { 'contrib':
     descr          => 'CentOS-$releasever - Contrib',
-    baseurl        => $baseurl_contrib,
-    mirrorlist     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/contrib/$basearch/',
+    baseurl     => 'http://linuxsoft.cern.ch/centos-vault/$releasever/contrib/$basearch/',
     failovermethod => 'priority',
     gpgcheck       => 1,
     gpgkey         => 'file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6',
